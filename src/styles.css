@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  /* ### Primary Colors */
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
+  --font-md: 400;
+  --font-bold: 600;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global */
+
+html,
+body {
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-bold);
+}
+
+p {
+  font-weight: var(--font-md);
+}
+
+img {
+  width: 100%;
+}
+
+/* Global End */
+
+
+
+.hero__banner {
+  background: url(./assets/images/bg-mobile.svg), var(--violet);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: cover;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .hero__banner {
+    background: url(./assets/images/bg-desktop.svg), var(--violet);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
